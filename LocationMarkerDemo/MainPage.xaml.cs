@@ -92,7 +92,7 @@ namespace LocationMarkerDemo
         private void clearButton_Click(object sender, RoutedEventArgs e)
         {
             lastPath = null;
-
+            mainPanel.Children.Clear();
             for (int y = 0; y < 600; y += 50)
             {
                 for (int x = 0; x < 800; x += 50)
