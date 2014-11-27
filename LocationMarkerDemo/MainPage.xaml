@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="LocationMarkerDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LocationMarkerDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Canvas Width="800" Height="600" Background="Gray" x:Name="mainPanel" PointerReleased="mainPanel_PointerReleased" Canvas.Top="22">
+        </Canvas>
+        <Button x:Name="generateButton" Content="Generate Path" Canvas.Left="325" Canvas.Top="723" Click="generateButton_Click" Margin="711,717,0,13"/>
+        <Button x:Name="clearButton" Content="Clear" Canvas.Left="474" Canvas.Top="723" Click="clearButton_Click" Margin="859,717,0,13"/>
+        <TextBox x:Name="overflowBox" Canvas.Left="226" TextWrapping="Wrap" Text="4" Canvas.Top="640" Height="32" Margin="543,720,759,16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="543,701,0,0" TextWrapping="Wrap" Text="Overflow" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="wobbleBox" HorizontalAlignment="Left" Margin="626,720,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="57"/>
+        <TextBlock HorizontalAlignment="Left" Margin="626,701,0,0" TextWrapping="Wrap" Text="Wobbliness" VerticalAlignment="Top" FontSize="12"/>
+        <CheckBox x:Name="overflowEdgesCheckBox" Content="Overflow Edges" HorizontalAlignment="Left" Margin="393,717,0,0" VerticalAlignment="Top" IsChecked="True"/>
+    </Grid>
+</Page>
