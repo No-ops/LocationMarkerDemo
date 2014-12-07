@@ -8,14 +8,17 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Canvas Width="800" Height="600" Background="Gray" x:Name="mainPanel" PointerReleased="mainPanel_PointerReleased" Canvas.Top="22">
-        </Canvas>
-        <Button x:Name="generateButton" Content="Generate Path" Canvas.Left="325" Canvas.Top="723" Click="generateButton_Click" Margin="711,717,0,13"/>
-        <Button x:Name="clearButton" Content="Clear" Canvas.Left="474" Canvas.Top="723" Click="clearButton_Click" Margin="859,717,0,13"/>
-        <TextBox x:Name="overflowBox" Canvas.Left="226" TextWrapping="Wrap" Text="4" Canvas.Top="640" Height="32" Margin="543,720,759,16"/>
-        <TextBlock HorizontalAlignment="Left" Margin="543,701,0,0" TextWrapping="Wrap" Text="Overflow" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="wobbleBox" HorizontalAlignment="Left" Margin="626,720,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="57"/>
-        <TextBlock HorizontalAlignment="Left" Margin="626,701,0,0" TextWrapping="Wrap" Text="Wobbliness" VerticalAlignment="Top" FontSize="12"/>
-        <CheckBox x:Name="overflowEdgesCheckBox" Content="Overflow Edges" HorizontalAlignment="Left" Margin="393,717,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="600*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Canvas Background="Gray" x:Name="mainPanel" PointerReleased="mainPanel_PointerReleased" Margin="287,0,279,22" Grid.Row="0" Height="600" HorizontalAlignment="Center" Width="800" VerticalAlignment="Center"/>
+        <Button x:Name="generateButton" Content="Generate Path" Click="generateButton_Click" Margin="616,43,621,19" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="clearButton" Content="Clear" Click="clearButton_Click" Margin="759,43,539,19" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="overflowBox" TextWrapping="Wrap" Text="4" Margin="441,46,861,22" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Center" Margin="441,22,861,59" TextWrapping="Wrap" Text="Overflow" VerticalAlignment="Center" FontSize="16" Grid.Row="1" Height="19" Width="64"/>
+        <TextBox x:Name="wobbleBox" HorizontalAlignment="Center" Margin="535,46,767,22" TextWrapping="Wrap" Text="2" VerticalAlignment="Center" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Center" Margin="535,22,770,64" TextWrapping="Wrap" Text="Wobbliness" VerticalAlignment="Center" FontSize="12" Grid.Row="1" Height="14" Width="61"/>
+        <CheckBox x:Name="overflowEdgesCheckBox" Content="Overflow Edges" HorizontalAlignment="Center" Margin="284,43,952,30" VerticalAlignment="Center" IsChecked="True" Grid.Row="1" Height="27" Width="130"/>
     </Grid>
 </Page>
